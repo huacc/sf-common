@@ -1,0 +1,61 @@
+# --- Python caches ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Build and packaging ---
+build/
+dist/
+downloads/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+wheels/
+sdist/
+*.egg
+MANIFEST
+
+# --- Test and coverage ---
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.hypothesis/
+
+# --- Type checkers / linters ---
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.pyre/
+.pylint.d/
+
+# --- Environments ---
+.env
+.env.*
+.envrc
+.venv/
+venv/
+env/
+ENV/
+
+# --- Editors & OS files ---
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+
+# --- Docs & sites ---
+docs/_build/
+site/
+
+# --- Project outputs ---
+out/
+
+# --- Local config overrides (keep templates committed) ---
+config/local*.yaml
+config/*.local.yaml
+
