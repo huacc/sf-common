@@ -58,4 +58,4 @@ out/
 # --- Local config overrides (keep templates committed) ---
 config/local*.yaml
 config/*.local.yaml
-
+!config/local.example.yaml
