@@ -1,0 +1,5 @@
+﻿postgres:
+  dsn: postgresql://postgres:123456@192.168.0.119:5432/postgres
+  schema: rdf_acl
+  migrations_table: rdf_acl_migrations
+

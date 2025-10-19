@@ -1,0 +1,4 @@
+logging:
+  level: DEBUG
+  format: json
+  json_indent: 2

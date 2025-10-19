@@ -1,0 +1,16 @@
+﻿app:
+  env: development
+  debug: true
+
+rdf:
+  dataset: semantic_forge_test
+
+postgres:
+  schema: rdf_acl_dev
+  migrations_table: rdf_acl_migrations
+
+redis:
+  namespace: semanticforge_dev
+
+
+

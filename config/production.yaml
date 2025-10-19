@@ -1,0 +1,47 @@
+﻿app:
+  env: production
+  debug: false
+  port: 8080
+
+cors:
+  origins:
+    - https://semanticforge.example.com
+    - https://console.semanticforge.example.com
+
+rdf:
+  endpoint: http://192.168.0.119:3030
+  dataset: sf_prod
+  timeout:
+    default: 30
+    max: 90
+  retries:
+    max_attempts: 5
+    backoff_seconds: 1.0
+    backoff_multiplier: 2.0
+    jitter_seconds: 0.5
+
+postgres:
+  dsn: postgresql://postgres:123456@192.168.0.119:5432/semantic_forge
+  schema: rdf_acl
+  migrations_table: rdf_acl_migrations
+
+redis:
+  url: redis://:123456@192.168.0.119:6379/0
+  namespace: semanticforge_prod
+
+qdrant:
+  http_url: http://192.168.0.119:6333
+  grpc_url: grpc://192.168.0.119:6334
+  timeout:
+    default: 20
+    max: 60
+
+logging:
+  level: INFO
+  format: json
+  json_indent: null
+
+security:
+  require_api_key: true
+
+

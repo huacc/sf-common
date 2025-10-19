@@ -1,0 +1,35 @@
+﻿app:
+  env: e2e
+  debug: false
+
+rdf:
+  endpoint: http://192.168.0.119:3030
+  dataset: semantic_forge_test
+  timeout:
+    default: 30
+    max: 120
+  retries:
+    max_attempts: 3
+    backoff_seconds: 0.5
+    backoff_multiplier: 2.0
+    jitter_seconds: 0.1
+  circuitBreaker:
+    failureThreshold: 5
+    recoveryTimeout: 30
+    recordTimeoutOnly: false
+
+postgres:
+  dsn: postgresql+psycopg://postgres:123456@192.168.0.119:5432/postgres
+  schema: rdf_acl
+  migrations_table: rdf_acl_migrations
+
+redis:
+  url: redis://:123456@192.168.0.119:6379/0
+  namespace: semanticforge
+
+qdrant:
+  http_url: http://192.168.0.119:6333
+  grpc_url: null
+
+
+
